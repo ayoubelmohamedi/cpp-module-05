@@ -7,12 +7,19 @@ int main ()
     try
     {
         Bureaucrat bureaucrat("John", 1);
-        Bureaucrat c("Bob", 100);
+        Bureaucrat c("Bob", 150);
 
         Bureaucrat b = bureaucrat;
         std::cout << b << std::endl;
+
+
         std::cout << bureaucrat << std::endl;
-        bureaucrat.incrementGrade();
+        std::cout << c << std::endl;
+        std::cout << b << std::endl;
+
+
+        // bureaucrat.incrementGrade();
+
     }
     catch (const Bureaucrat::GradeTooHighException &e)
     {

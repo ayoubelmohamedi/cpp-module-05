@@ -5,7 +5,7 @@
 
 Bureaucrat::Bureaucrat() : _name("default"), _grade(150)
 {
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default constructor called: " << _name << ", grade " << _grade << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name)
@@ -16,12 +16,12 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name)
         throw Bureaucrat::GradeTooLowException();
     else
         _grade = grade;
-    std::cout << "Constructor called" << std::endl;
+    std::cout << "Constructor called:" << _name << ", grade " << _grade << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &other) : _name(other._name)
 {
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "Copy constructor called: " << _name << ", grade " << _grade << std::endl;
     *this = other;
 }
 
