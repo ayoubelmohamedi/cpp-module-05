@@ -13,6 +13,11 @@ $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(TARGET)
+	rm -f $(OBJS)
+
+fclean: clean
+	rm -f $(TARGET)
+
+re: fclean all
 
 .PHONY: all clean
