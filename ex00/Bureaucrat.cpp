@@ -27,7 +27,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat &other) : _name(other._name)
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
 {
-    std::cout << "Copy assignment operator called" << std::endl;
+    std::cout << "Copy assignment operator called " << _name << ", grade " << _grade << std::endl;
     if (this != &other)
         _grade = other._grade;
     return *this;

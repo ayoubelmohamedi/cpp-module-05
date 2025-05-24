@@ -1,9 +1,6 @@
 
-
-
 #ifndef BUREAUCRAT_CPP
 #define BUREAUCRAT_CPP
-
 
 #include <iostream>
 #include <string>

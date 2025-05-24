@@ -6,6 +6,7 @@ int main ()
 {
     try
     {
+        Bureaucrat defaultBureaucrat;
         Bureaucrat bureaucrat("John", 1);
         Bureaucrat c("Bob", 150);
 
@@ -17,8 +18,9 @@ int main ()
         std::cout << c << std::endl;
         std::cout << b << std::endl;
 
+        defaultBureaucrat.incrementGrade();
+        bureaucrat.incrementGrade();
 
-        // bureaucrat.incrementGrade();
 
     }
     catch (const Bureaucrat::GradeTooHighException &e)
@@ -29,6 +31,5 @@ int main ()
     {
         std::cerr << e.what() << std::endl;
     }
-    
     return 0;
 }
