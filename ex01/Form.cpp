@@ -62,12 +62,12 @@ void Form::beSigned(const Bureaucrat &bureaucrat)
 {
     if (isSigned())
     {
-        std::cout << bureaucrat.getName() << " couldn’t sign " <<_name << "because it's already signed." << std::endl;
+        std::cout << bureaucrat.getName() << " couldn’t sign " <<_name << ", because it's already signed." << std::endl;
         return;
     }
     if (bureaucrat.getGrade() > _signGrade)
     {
-        std::cout << bureaucrat.getName() << " couldn’t sign " <<_name << "because grade isn't high enough." << std::endl;
+        std::cout << bureaucrat.getName() << " couldn’t sign " <<_name << ", because grade isn't high enough." << std::endl;
         throw Form::GradeTooLowException();
     }
     _isSigned = true;
