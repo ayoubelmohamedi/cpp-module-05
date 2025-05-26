@@ -4,7 +4,7 @@
 
 
 
-Form::Form() : _name("default"), _isSigned(false), _signGrade(150), _executeGrade(150)
+Form::Form() : _name("default_form"), _isSigned(false), _signGrade(150), _executeGrade(150)
 {
     std::cout << "Default constructor called: " << _name << ", sign grade " << _signGrade << ", execute grade " << _executeGrade << std::endl;
 }
@@ -60,10 +60,18 @@ int Form::getExecuteGrade() const
 
 void Form::beSigned(const Bureaucrat &bureaucrat)
 {
+    if (isSigned())
+    {
+        std::cout << bureaucrat.getName() << " couldn’t sign " <<_name << "because it's already signed." << std::endl;
+        return;
+    }
     if (bureaucrat.getGrade() > _signGrade)
+    {
+        std::cout << bureaucrat.getName() << " couldn’t sign " <<_name << "because grade isn't high enough." << std::endl;
         throw Form::GradeTooLowException();
+    }
     _isSigned = true;
-    std::cout << bureaucrat.getName() << " signed form: " << _name << std::endl;
+    std::cout << bureaucrat.getName() << " signed " << _name << std::endl;
 }
 
 const char *Form::GradeTooHighException::what() const throw()
