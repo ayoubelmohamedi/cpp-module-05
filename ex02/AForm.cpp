@@ -1,6 +1,6 @@
 
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
 
 
@@ -71,6 +71,23 @@ void Form::beSigned(const Bureaucrat &bureaucrat)
     }
     _isSigned = true;
     std::cout << bureaucrat.getName() << " signed " << _name << std::endl;
+}
+
+bool Form::isExecutableBy(const Bureaucrat &bureaucrat) const
+{
+    if (!isSigned() || bureaucrat.getGrade() > _executeGrade)
+        return (false);
+    return true;
+}
+
+const char *Form::FormNotSignedException::what() const throw()
+{
+    return "Form is not signed!";
+}
+
+const char *Form::FormLowExecutionGradeException::what() const throw()
+{
+    return "Bureaucrat's grade is too low to execute this form!";
 }
 
 const char *Form::GradeTooHighException::what() const throw()
