@@ -6,7 +6,7 @@
 #include <string>
 #include <exception>
 
-class Form; 
+class AForm; 
 
 class Bureaucrat
 {
