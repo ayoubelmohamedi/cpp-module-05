@@ -68,7 +68,7 @@ void Bureaucrat::decrementGrade()
     _grade++;
 }
 
-void Bureaucrat::signForm(const Form &form) const
+void Bureaucrat::signForm(const AForm &form) const
 {
     if (form.isSigned())
     {
