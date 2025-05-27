@@ -38,9 +38,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
         throw AForm::FormNotSignedException();
     if (!isExecutableBy(executor))
         throw AForm::GradeTooLowException();
-
-    std::cout << "Executing ShrubberyCreationForm for target: " << _target << std::endl;
-    
+ 
     std::string filename = _target + "_shrubbery";
     std::ofstream outfile(filename.c_str());
     
@@ -71,8 +69,8 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
     outfile << "       ||       " << std::endl;
     
     outfile.close();
-    
-    std::cout << "Created file: " << filename << " with ASCII trees" << std::endl;
+
+    std::cout << executor.getName() << " executed " << _target << std::endl;
 }
 
 
