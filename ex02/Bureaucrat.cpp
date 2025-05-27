@@ -86,6 +86,10 @@ void Bureaucrat::signForm(const AForm &form) const
 
 void Bureaucrat::executeForm(const AForm &form) const
 {
+    if (!form.isSigned())
+        throw AForm::FormNotSignedException();
+    if (!form.isExecutableBy(*this))
+        throw AForm::GradeTooLowException();
     form.execute(*this);
 }
 
