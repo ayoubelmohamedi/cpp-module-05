@@ -52,6 +52,21 @@
         "memory": "cpp",
         "ratio": "cpp",
         "algorithm": "cpp",
-        "exception": "cpp"
+        "exception": "cpp",
+        "atomic": "cpp",
+        "bit": "cpp",
+        "charconv": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "functional": "cpp",
+        "memory_resource": "cpp",
+        "random": "cpp",
+        "system_error": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "format": "cpp",
+        "numbers": "cpp",
+        "span": "cpp",
+        "text_encoding": "cpp"
     }
 }
