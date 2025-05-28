@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 00:49:56 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/29 00:54:30 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/29 00:56:26 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,17 @@ int main() {
         std::cout << bob << std::endl;
         std::cout << formA << std::endl;
 
+        std::cout << "=======================================" << std::endl;
         std::cout << "\nBob tries to sign the form (should fail):" << std::endl;
         bob.signForm(formA);
+
+        std::cout << "=======================================" << std::endl;
 
         std::cout << "\nAlice tries to sign the form (should succeed):" << std::endl;
         alice.signForm(formA);
 
+        std::cout << "=======================================" << std::endl;
+        
         std::cout << "\nForm status after signing attempts:" << std::endl;
         std::cout << formA << std::endl;
     }
