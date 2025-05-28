@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 22:07:00 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/28 19:49:47 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/28 20:53:19 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main ()
     // {"presidential pardon"
 
     try{
-        Bureaucrat person1("John", 5);
+        Bureaucrat person1("John", 140);
         Intern intern1;
         AForm *form = intern1.makeForm("robotomy request", "Robot"); 
         if (form)
@@ -33,8 +33,6 @@ int main ()
             form->execute(person1);
             delete form;
         }
-        else
-            std::cerr << "Form creation failed!" << std::endl;
     }catch(const Bureaucrat::GradeTooHighException &e)
     {
         std::cerr << "Exception: " << e.what() << std::endl;
