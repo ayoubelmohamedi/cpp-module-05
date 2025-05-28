@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 22:07:30 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/28 20:44:34 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/29 00:17:53 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ void Bureaucrat::executeForm(const AForm &form) const
     if (!form.isSigned())
         throw AForm::FormNotSignedException();
     if (!form.isExecutableBy(*this))
-        throw AForm::GradeTooLowException();
+        throw AForm::FormLowExecutionGradeException();
     form.execute(*this);
 }
 

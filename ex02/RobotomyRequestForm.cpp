@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 22:07:43 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/27 22:07:44 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/29 00:18:40 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const {
     if (!isSigned())
         throw AForm::FormNotSignedException();
     if (!isExecutableBy(executor))
-        throw AForm::GradeTooLowException();
+        throw AForm::FormLowExecutionGradeException();
 
     std::cout << "* Drilling noises *" << std::endl;
     if (rand() % 2) {

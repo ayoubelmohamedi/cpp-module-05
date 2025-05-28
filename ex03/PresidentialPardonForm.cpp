@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 22:07:04 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/27 22:07:05 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/29 00:20:23 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void PresidentialPardonForm::execute(Bureaucrat const & executor) const {
     if (!isSigned())
         throw AForm::FormNotSignedException();
     if (!isExecutableBy(executor))
-        throw AForm::GradeTooLowException();
+        throw AForm::FormLowExecutionGradeException();
 
     std::cout << _target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }

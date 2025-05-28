@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 22:07:16 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/27 22:07:17 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/29 00:20:07 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
     if (!isSigned())
         throw AForm::FormNotSignedException();
     if (!isExecutableBy(executor))
-        throw AForm::GradeTooLowException();
+        throw AForm::FormLowExecutionGradeException();
  
     std::string filename = _target + "_shrubbery";
     std::ofstream outfile(filename.c_str());
