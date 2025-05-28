@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 22:06:56 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/28 18:53:05 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/28 18:53:58 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static const FormMap forms[] = {
 AForm* Intern::makeForm(const std::string _formName, const std::string target) const
 {
     //data-driven approach, instead of if/else
-    for (size_t i = 0; i < 3; i++)
+    for (size_t i = 0; i < sizeof(forms)/sizeof(forms[0]); i++)
     {
         if (_formName == forms[i].name)
             return (forms[i].creator(target));
