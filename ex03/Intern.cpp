@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 22:06:56 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/28 20:05:14 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/28 20:06:40 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ Intern &Intern::operator=(const Intern &other)
 {
     std::cout << "Intern Assignation operator called" << std::endl;
     // nothing to copy
+    (void)other;
     return (*this);
 }
 
