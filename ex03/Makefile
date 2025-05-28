@@ -6,7 +6,7 @@
 #    By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/27 22:07:02 by ael-moha          #+#    #+#              #
-#    Updated: 2025/05/27 22:07:03 by ael-moha         ###   ########.fr        #
+#    Updated: 2025/05/28 20:07:37 by ael-moha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS = Bureaucrat.cpp main.cpp AForm.cpp ShrubberyCreationForm.cpp \
 		 Intern.cpp
 
 OBJS = $(SRCS:.cpp=.o)
-TARGET = real_forms
+TARGET = intern_forms
 
 all: $(TARGET)
 
