@@ -67,6 +67,12 @@
         "format": "cpp",
         "numbers": "cpp",
         "span": "cpp",
-        "text_encoding": "cpp"
+        "text_encoding": "cpp",
+        "chrono": "cpp",
+        "map": "cpp",
+        "numeric": "cpp",
+        "fstream": "cpp",
+        "iomanip": "cpp",
+        "cinttypes": "cpp"
     }
 }

@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 22:08:15 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/27 22:08:16 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/28 20:44:48 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ class Bureaucrat
         int getGrade() const;
         void incrementGrade();
         void decrementGrade();
-        void signForm(const Form &form) const;
+        void signForm(Form &form) const;
 
         class GradeTooHighException : public std::exception
         {

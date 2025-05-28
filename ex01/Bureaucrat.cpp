@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 22:08:12 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/27 22:08:13 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/28 20:45:04 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void Bureaucrat::decrementGrade()
     _grade++;
 }
 
-void Bureaucrat::signForm(const Form &form) const
+void Bureaucrat::signForm(Form &form) const
 {
     if (form.isSigned())
     {
@@ -92,6 +92,7 @@ void Bureaucrat::signForm(const Form &form) const
     }
     else
     {
+        form.beSigned(*this);
         std::cout << getName() << " signed " << form.getName() << "." << std::endl;
     }
 }
