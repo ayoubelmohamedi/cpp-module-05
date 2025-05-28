@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 22:06:46 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/27 22:06:47 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/28 23:55:10 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 AForm::AForm() : _name("default_form"), _isSigned(false), _signGrade(150), _executeGrade(150)
 {
-    std::cout << "Default constructor called: " << _name << ", sign grade " << _signGrade << ", execute grade " << _executeGrade << std::endl;
+    std::cout << "Default constructor called AForm: " << _name << ", sign grade " << _signGrade << ", execute grade " << _executeGrade << std::endl;
 }
 
 AForm::AForm(const std::string name, int signGrade, int executeGrade) 
@@ -28,18 +28,18 @@ AForm::AForm(const std::string name, int signGrade, int executeGrade)
         throw AForm::GradeTooHighException();
     else if (signGrade > 150 || executeGrade > 150)
         throw AForm::GradeTooLowException();
-    std::cout << "Constructor called: " << _name << ", sign grade " << _signGrade << ", execute grade " << _executeGrade << std::endl;
+    std::cout << "Constructor called AForm:" << _name << ", sign grade " << _signGrade << ", execute grade " << _executeGrade << std::endl;
 }
 
 AForm::AForm(const AForm &other) 
     : _name(other._name), _isSigned(other._isSigned), _signGrade(other._signGrade), _executeGrade(other._executeGrade)
 {
-    std::cout << "Copy constructor called: " << _name << ", sign grade " << _signGrade << ", execute grade " << _executeGrade << std::endl;
+    std::cout << "Copy constructor called AForm: " << _name << ", sign grade " << _signGrade << ", execute grade " << _executeGrade << std::endl;
 }
 
 AForm &AForm::operator=(const AForm &other)
 {
-    std::cout << "Copy assignment operator called: " << _name << ", sign grade " << _signGrade << ", execute grade " << _executeGrade << std::endl;
+    std::cout << "Copy assignment operator called AForm: " << _name << ", sign grade " << _signGrade << ", execute grade " << _executeGrade << std::endl;
     if (this != &other)
         _isSigned = other._isSigned;
     return *this;
@@ -47,7 +47,7 @@ AForm &AForm::operator=(const AForm &other)
 
 AForm::~AForm()
 {
-    std::cout << "Destructor called for form: " << _name << std::endl;
+    std::cout << "Destructor called for AForm: " << _name << std::endl;
 }
 
 std::string AForm::getName() const
