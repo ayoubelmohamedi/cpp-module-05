@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 22:06:56 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/28 18:48:12 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/28 18:51:47 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ AForm* Intern::makeForm(const std::string _formName, const std::string target) c
         if (_formName == forms[i].name)
             return (forms[i].creator(target));
     }
-    return (NULL);
+    return (nullptr);
 } 
 
 Intern &Intern::operator=(const Intern &other)
