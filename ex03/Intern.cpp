@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 22:06:56 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/28 18:53:58 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/28 20:05:14 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ AForm* Intern::makeForm(const std::string _formName, const std::string target) c
             return (forms[i].creator(target));
     }
     std::cout << "Form type not found" << std::endl;
-    return (nullptr);
+    return (NULL);
 } 
 
 Intern &Intern::operator=(const Intern &other)
