@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 22:07:00 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/28 20:53:19 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/28 23:28:17 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,13 @@ int main ()
         std::cerr << "Exception: " << e.what() << std::endl;
     } catch (const Bureaucrat::GradeTooLowException &e)
     {
+        std::cerr << "Exception: " << e.what() << std::endl;
+    }
+    catch (const AForm::FormNotSignedException& e)
+    {
+        std::cerr << "Exception: " << e.what() << std::endl;
+    }catch (const AForm::FormLowExecutionGradeException& e)
+    { 
         std::cerr << "Exception: " << e.what() << std::endl;
     }
     
