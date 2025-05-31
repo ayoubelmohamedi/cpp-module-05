@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 22:08:45 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/27 22:08:46 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/31 19:59:04 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,9 @@ int main ()
         std::cout << b << std::endl;
 
         defaultBureaucrat.incrementGrade();
+        std::cout << "new grade :" << defaultBureaucrat << std::endl;
         bureaucrat.incrementGrade();
+        std::cout << "new grade 2:" <<bureaucrat << std::endl;
 
 
     }
