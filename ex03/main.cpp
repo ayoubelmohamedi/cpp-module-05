@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 22:07:00 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/28 23:46:08 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/31 20:18:56by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,25 +27,27 @@ int main ()
         AForm *form = intern1.makeForm("robotomy request", "Robot"); 
         if (form)
         {
-            person1.signForm(*form);
-            form->execute(person1);
+            try {
+                person1.signForm(*form);
+                form->execute(person1);
+            }
+            catch (const AForm::FormNotSignedException& e)
+            {
+                std::cerr << "Exception: " << e.what() << std::endl;    
+            }
+            catch (const AForm::FormLowExecutionGradeException& e)
+            { 
+                std::cerr << "Exception: " << e.what() << std::endl;
+            }
             delete form;
         }
-    }catch(const Bureaucrat::GradeTooHighException &e)
-    {
-        std::cerr << "Exception: " << e.what() << std::endl;
-    } catch (const Bureaucrat::GradeTooLowException &e)
-    {
-        std::cerr << "Exception: " << e.what() << std::endl;
-    }
-    catch (const AForm::FormNotSignedException& e)
-    {
-        std::cerr << "Exception: " << e.what() << std::endl;
-    }catch (const AForm::FormLowExecutionGradeException& e)
-    { 
-        std::cerr << "Exception: " << e.what() << std::endl;
-    }
-
+        }catch(const Bureaucrat::GradeTooHighException &e)
+        {
+            std::cerr << "Exception: " << e.what() << std::endl;
+        } catch (const Bureaucrat::GradeTooLowException &e)
+        {
+            std::cerr << "Exception: " << e.what() << std::endl;
+        }
 
     std::cout << "=========================================" << std::endl;
 
@@ -55,8 +57,18 @@ int main ()
         AForm *form = intern1.makeForm("shrubbery creation", "Garden"); 
         if (form)
         {
-            person2.signForm(*form);
-            form->execute(person2);
+            try
+            {
+                person2.signForm(*form);
+                form->execute(person2);
+            }
+            catch (const AForm::FormNotSignedException& e)
+            {
+                std::cerr << "Exception: " << e.what() << std::endl;
+            }catch (const AForm::FormLowExecutionGradeException& e)
+            { 
+                std::cerr << "Exception: " << e.what() << std::endl;
+            } 
             delete form;
         }
     }catch(const Bureaucrat::GradeTooHighException &e)
@@ -64,13 +76,6 @@ int main ()
         std::cerr << "Exception: " << e.what() << std::endl;
     } catch (const Bureaucrat::GradeTooLowException &e)
     {
-        std::cerr << "Exception: " << e.what() << std::endl;
-    }
-    catch (const AForm::FormNotSignedException& e)
-    {
-        std::cerr << "Exception: " << e.what() << std::endl;
-    }catch (const AForm::FormLowExecutionGradeException& e)
-    { 
         std::cerr << "Exception: " << e.what() << std::endl;
     }
     
@@ -82,8 +87,17 @@ int main ()
         AForm *form = intern1.makeForm("presidential pardon", "Corleone"); 
         if (form)
         {
-            person3.signForm(*form);
-            form->execute(person3);
+            try {
+                person3.signForm(*form);
+                form->execute(person3);
+            } 
+            catch (const AForm::FormNotSignedException& e)
+            {
+                std::cerr << "Exception: " << e.what() << std::endl;
+            }catch (const AForm::FormLowExecutionGradeException& e)
+            {
+                std::cerr << "Exception: " << e.what() << std::endl;
+            }
             delete form;
         }
     }catch(const Bureaucrat::GradeTooHighException &e)
@@ -93,13 +107,7 @@ int main ()
     {
         std::cerr << "Exception: " << e.what() << std::endl;
     }
-    catch (const AForm::FormNotSignedException& e)
-    {
-        std::cerr << "Exception: " << e.what() << std::endl;
-    }catch (const AForm::FormLowExecutionGradeException& e)
-    { 
-        std::cerr << "Exception: " << e.what() << std::endl;
-    }
+   
     
     return 0;
 }
