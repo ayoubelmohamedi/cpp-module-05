@@ -6,7 +6,7 @@
 /*   By: ael-moha <ael-moha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 22:07:30 by ael-moha          #+#    #+#             */
-/*   Updated: 2025/05/29 00:17:53 by ael-moha         ###   ########.fr       */
+/*   Updated: 2025/05/31 20:03:43 by ael-moha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,6 @@ void Bureaucrat::signForm(AForm &form) const
     else
     {
         form.beSigned(*this);
-        std::cout << getName() << " signed " << form.getName() << "." << std::endl;
     }
 }
 
