@@ -39,9 +39,9 @@ AForm::AForm(const AForm &other)
 
 AForm &AForm::operator=(const AForm &other)
 {
-    std::cout << "Copy assignment operator called AForm: " << _name << ", sign grade " << _signGrade << ", execute grade " << _executeGrade << std::endl;
     if (this != &other)
         _isSigned = other._isSigned;
+    std::cout << "Copy assignment operator called AForm: " << _name << ", sign grade " << _signGrade << ", execute grade " << _executeGrade << std::endl;
     return *this;
 }
 

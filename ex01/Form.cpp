@@ -80,6 +80,7 @@ void Form::beSigned(const Bureaucrat &bureaucrat)
     if (bureaucrat.getGrade() > _signGrade)
     {
         std::cout << bureaucrat.getName() << " couldn’t sign " <<_name << ", because grade isn't high enough." << std::endl;
+        return;
     }
     _isSigned = true;
     std::cout << bureaucrat.getName() << " signed " << _name << std::endl;
